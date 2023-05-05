@@ -25,6 +25,16 @@ body {
   margin-left: auto;
 }
 
+
+
+
+
+/* @media (max-width:393px)  {
+  .container {
+    width: 350px;
+  }
+} */
+
 /* header start  */
 
 header.hidewhenmobile {
@@ -97,6 +107,9 @@ section .container .left {
   margin-bottom: 40px;
 }
 
+.section_three .container .holder .areas:first-child {
+  margin-left: 10px;
+}
 .section_three .container .holder {
   /* flex-direction: column;
   text-align: center; */

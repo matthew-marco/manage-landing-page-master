@@ -141,9 +141,7 @@ main .container .left button:hover {
 
 
 @media (max-width: 767px) {
-  .container {
-    width: 400px;
-  }
+
 
   main .container .right img {
     width: 100%;
