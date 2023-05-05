@@ -27,7 +27,7 @@ body {
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 700px;
   }
 }
 
@@ -137,16 +137,11 @@ main .container .left button {
 main .container .left button:hover {
   filter: brightness(160%);
 }
-
-
-
-@media (max-width: 767px) {
-
-
-  main .container .right img {
-    width: 100%;
-  }
+main .container .right img {
+  max-width: 100%;
 }
+
+
 
 /* sectionn end */
 
