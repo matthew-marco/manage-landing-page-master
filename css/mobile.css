@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+:root {
+  --Bright-Red: hsl(12, 88%, 59%);
+  --Dark-Blue: hsl(228, 39%, 23%);
+
+  --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+  --Very-Dark-Blue: hsl(233, 12%, 13%);
+  --Very-Pale-Red: #ffefeb;
+  --Vary-Light-Gray: hsl(0, 0%, 98%);
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* header start  */
+
+header.hidewhenmobile {
+  display: none;
+
+}
+
+.showwhenmobile {
+  display: block;
+  /* margin-bottom: 150px; */
+}
+
+.showwhenmobile .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showwhenmobile .container .holdernav.close {
+  display: none;
+}
+
+/* header end  */
+.showwhenmobile .container .holdernav {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  text-align: center;
+  top: 40px;
+}
+
+.showwhenmobile .container .holdernav a {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+
+  color: var(--Dark-Blue);
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+
+
+
+}
+
+
+main .container {
+  flex-direction: column;
+  text-align: center;
+}
+
+main .container .left {
+  display: flex;
+  flex-direction: column;
+}
+
+main .container .left button {
+  align-self: center;
+}
+
+section .container {
+  flex-direction: column;
+  text-align: center;
+}
+
+section .container .left {
+  margin-bottom: 40px;
+}
+
+.section_three .container .holder {
+  /* flex-direction: column;
+  text-align: center; */
+  overflow-y: scroll;
+}
+
+.section_three .container .holder::-webkit-scrollbar {
+  display: none;
+}
+
+.section_three .container .holder .areas {
+  min-width: 350px;
+  margin-right: 50px;
+}
+
+.section_three .container .holder :last-child {
+  margin-right: 0;
+}
+
+/* main end  */
+/* footer start  */
+
+footer.hidewhenmobile {
+  display: none;
+}
+
+footer.showwhenmobile {
+  display: block;
+}
+
+
+
+
+footer .container .third_row form {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container .third_row form .email {
+  padding: 10px 25px;
+  border-radius: 22px;
+  outline: none;
+}
+
+footer .container .third_row form .inputforerror.error p {
+  display: block;
+
+}
+
+footer .container .third_row form .inputforerror.error input {
+  border: 2px solid var(--Bright-Red);
+  color: red;
+  outline: none;
+}
+
+footer .container .third_row form .inputforerror p {
+  color: var(--Bright-Red);
+  margin-left: 10px;
+  margin-top: 10px;
+  display: none;
+
+}
+
+footer .container .third_row form .submit {
+  padding: 10px 25px;
+  border-radius: 22px;
+  color: white;
+  background-color: var(--Bright-Red);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer .container .third_row form input:last-of-type:hover {
+  filter: brightness(160%);
+
+}
+
+footer .container .third_row {
+  color: var(--Dark-Grayish-Blue);
+}
+
+.two_rows {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+
+}
+
+.logo img {
+  margin-bottom: 30px;
+}
+
+.logo p {
+  color: var(--Dark-Grayish-Blue);
+  margin-bottom: 30px;
+}
+
+/* footer end  */
