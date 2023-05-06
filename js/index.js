@@ -40,39 +40,25 @@ let points = document.querySelectorAll(".points");
 let holder = document.querySelector(".section_three .container .holder");
 let areas = document.querySelector(".section_three .container .holder .areas");
 
-
 holder.addEventListener("scroll", () => {
-  
   let holdernumb = holder.scrollLeft;
   if (holder.scrollLeft === 0 || holder.scrollLeft < 351) {
-    points.forEach((p) => { 
-      p.classList.remove("active")
-    })
-    document.querySelector(".first").classList.add("active")
-  }
-  else if (holder.scrollLeft === 350 || holder.scrollLeft < 750) {
-    points.forEach((p) => { 
-      p.classList.remove("active")
-    })
-    document.querySelector(".second").classList.add("active")
-  }
-  else if (holder.scrollLeft === 750 || holder.scrollLeft < 1125 ) {
-    points.forEach((p) => { 
-      p.classList.remove("active")
-    })
-    document.querySelector(".third").classList.add("active")
+    points.forEach((p) => {
+      p.classList.remove("active");
+    });
+    document.querySelector(".first").classList.add("active");
+  } else if (holder.scrollLeft === 350 || holder.scrollLeft < 750) {
+    points.forEach((p) => {
+      p.classList.remove("active");
+    });
+    document.querySelector(".second").classList.add("active");
+  } else if (holder.scrollLeft === 730 || holder.scrollLeft < 1125) {
+    points.forEach((p) => {
+      p.classList.remove("active");
+    });
+    document.querySelector(".third").classList.add("active");
   }
 });
-
-
-
-
-
-
-
-
-
-
 
 points.forEach((p) => {
   p.addEventListener("click", (e) => {
@@ -91,4 +77,3 @@ points.forEach((p) => {
     // holder.scrollBy(areas.scrollWidth,0)
   });
 });
-
