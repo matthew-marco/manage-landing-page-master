@@ -47,7 +47,7 @@ holder.addEventListener("scroll", () => {
       p.classList.remove("active");
     });
     document.querySelector(".first").classList.add("active");
-  } else if (holder.scrollLeft === 350 || holder.scrollLeft < 751) {
+  } else if (holder.scrollLeft === 350 || holder.scrollLeft < 729) {
     points.forEach((p) => {
       p.classList.remove("active");
     });
