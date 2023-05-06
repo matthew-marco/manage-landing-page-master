@@ -23,6 +23,24 @@ buttonSubmit.addEventListener("click", (e) => {
   }
 });
 
+let emailmob = document.querySelector(".email.mob");
+let buttonSubmitmob = document.querySelector(".submit.mob");
+console.log(emailmob);
+buttonSubmitmob.addEventListener("click", (e) => {
+  let send = false;
+  if (
+    !(email.value === "") &&
+    email.value.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )
+  ) {
+    send = true;
+  }
+  if (send === false) {
+    e.preventDefault();
+  }
+});
+
 let navMenu = document.querySelector(".holdernav");
 let navIcon = document.querySelector("i");
 let Header = document.querySelector(".showwhenmobile");

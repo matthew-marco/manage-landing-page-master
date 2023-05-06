@@ -99,6 +99,10 @@ main .container {
 main .container .left {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+main .container .left p{
+  max-width: 80%;
 }
 
 main .container .left button {
@@ -133,6 +137,11 @@ font-size: 14px;
   line-height: 35px;
   border-radius: 20px;
   position: relative;
+}
+
+section .container .left   p{
+max-width: 80%;
+margin: auto;
 }
 
 section .container .right .text  p{
@@ -210,6 +219,17 @@ section .container .right .text  span{
   margin-bottom: 40px;
 }
 /* section3 end */
+/* section4 start */
+.section_four .container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section_four .container h4{
+  width: 100%;
+  margin-bottom: 40px;
+}
+/* section4 end */
 
 /* footer start  */
 
