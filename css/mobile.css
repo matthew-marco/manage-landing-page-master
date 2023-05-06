@@ -101,14 +101,18 @@ main .container .left button {
 section .container {
   flex-direction: column;
   text-align: center;
+  align-items: center;
+
 }
 
 section .container .left {
   margin-bottom: 40px;
 }
 
-.section_three .container .holder .areas:first-child {
-  margin-left: 10px;
+
+.section_three .container{
+  padding-left: 0;
+  padding-right: 0;
 }
 .section_three .container .holder {
   /* flex-direction: column;
@@ -121,10 +125,15 @@ section .container .left {
 }
 
 .section_three .container .holder .areas {
-  min-width: 350px;
-  margin-right: 50px;
-}
+  min-width: fit-content;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section_three .container .holder .areas p{
+  max-width: 80%;
+}
 .section_three .container .holder :last-child {
   margin-right: 0;
 }
