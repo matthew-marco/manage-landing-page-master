@@ -42,19 +42,23 @@ let areas = document.querySelector(".section_three .container .holder .areas");
 
 holder.addEventListener("scroll", () => {
   let holdernumb = holder.scrollLeft;
-  if (holder.scrollLeft === 0 || holder.scrollLeft < 351) {
+  if (holder.scrollLeft < 350) {
     points.forEach((p) => {
       p.classList.remove("active");
     });
     document.querySelector(".first").classList.add("active");
-  } else if (holder.scrollLeft === 350 || holder.scrollLeft < 729) {
+  }
+  if (holder.scrollLeft > 351) {
     points.forEach((p) => {
       p.classList.remove("active");
+      console.log(holder.scrollLeft);
     });
     document.querySelector(".second").classList.add("active");
-  } else if (holder.scrollLeft === 730 || holder.scrollLeft < 1125) {
+  }
+  if (holder.scrollLeft > 650) {
     points.forEach((p) => {
       p.classList.remove("active");
+      console.log(holder.scrollLeft);
     });
     document.querySelector(".third").classList.add("active");
   }
