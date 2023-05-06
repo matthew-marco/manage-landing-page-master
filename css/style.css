@@ -176,9 +176,16 @@ section .container .right .setion {
 }
 
 section .container .right .setion .text h3 {
-  font-size: 18px;
+  /* font-size: 18px; */
   margin-bottom: 30px;
   color: var(--Dark-Blue);
+}
+@media (min-width:768px) {
+  section .container .right .setion .text h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--Dark-Blue);
+  }
 }
 
 section .container .right .setion .text p {

@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -27,7 +29,9 @@ body {
 
 
 
-
+.hidewhenmobile{
+  display: none;
+}
 
 /* @media (max-width:393px)  {
   .container {
@@ -61,13 +65,16 @@ header.hidewhenmobile {
 /* header end  */
 .showwhenmobile .container .holdernav {
   position: absolute;
-  left: 60%;
+  left: 80%;
   transform: translateX(-50%);
 
-  width: 100%;
+
   text-align: center;
   top: 40px;
+
+  width: 120px;
 }
+
 
 .showwhenmobile .container .holdernav a {
   display: block;
@@ -82,7 +89,7 @@ header.hidewhenmobile {
 
 
 }
-
+/* main start */
 
 main .container {
   flex-direction: column;
@@ -97,7 +104,12 @@ main .container .left {
 main .container .left button {
   align-self: center;
 }
+/* main end */
 
+/* section start */
+section .container .left h2{
+  font-size: 20px;
+}
 section .container {
   flex-direction: column;
   text-align: center;
@@ -108,7 +120,46 @@ section .container {
 section .container .left {
   margin-bottom: 40px;
 }
+section .container .right .text h3{
+margin-left: 35px;
+font-size: 14px;
+}
 
+.h3{
+  width: 100%;
+  background-color: var(--Very-Pale-Red);
+  padding: 0 25px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 20px;
+  position: relative;
+}
+
+section .container .right .text  p{
+max-width: 80%;
+margin: auto;
+}
+section .container .right .text  span{
+  background-color: var(--Bright-Red);
+  margin-right: 10px;
+
+  min-width: 68.72px;
+  padding: 2px 25px;
+  border-radius: 20px;
+  color: white;
+
+  font-weight: normal;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+/* section end */
+
+
+
+/* section3 start */
 
 .section_three .container{
   padding-left: 0;
@@ -131,14 +182,35 @@ section .container .left {
   flex-direction: column;
   align-items: center;
 }
+.section_three .container .holder {
+  scroll-behavior: smooth;
+}
 .section_three .container .holder .areas p{
   max-width: 80%;
+  margin-bottom: 25px;
 }
+
 .section_three .container .holder :last-child {
   margin-right: 0;
 }
+.section_three .container .points{
+  width: 20px;
+  height: 20px;border-radius: 10px;
+  background: white;
+  margin-right: 30px;
+  border: 3px solid black;
+}
+.section_three .container .points.active{
+  background-color: black;
+}
+.section_three .container .pointsHolder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+/* section3 end */
 
-/* main end  */
 /* footer start  */
 
 footer.hidewhenmobile {
@@ -157,6 +229,7 @@ footer .container .third_row form {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
 
 }
 

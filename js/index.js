@@ -29,9 +29,66 @@ let Header = document.querySelector(".showwhenmobile");
 navIcon.addEventListener("click", () => {
   navMenu.classList.toggle("close");
   if (!navMenu.classList.contains("close")) {
-    Header.style.marginBottom = "150px"
+    Header.style.marginBottom = "150px";
   }
   if (navMenu.classList.contains("close")) {
-    Header.style.marginBottom = "80px"
+    Header.style.marginBottom = "80px";
   }
 });
+
+let points = document.querySelectorAll(".points");
+let holder = document.querySelector(".section_three .container .holder");
+let areas = document.querySelector(".section_three .container .holder .areas");
+
+
+holder.addEventListener("scroll", () => {
+  
+  let holdernumb = holder.scrollLeft;
+  if (holder.scrollLeft === 0 || holder.scrollLeft < 351) {
+    points.forEach((p) => { 
+      p.classList.remove("active")
+    })
+    document.querySelector(".first").classList.add("active")
+  }
+  else if (holder.scrollLeft === 350 || holder.scrollLeft < 750) {
+    points.forEach((p) => { 
+      p.classList.remove("active")
+    })
+    document.querySelector(".second").classList.add("active")
+  }
+  else if (holder.scrollLeft === 750 || holder.scrollLeft < 1125 ) {
+    points.forEach((p) => { 
+      p.classList.remove("active")
+    })
+    document.querySelector(".third").classList.add("active")
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+points.forEach((p) => {
+  p.addEventListener("click", (e) => {
+    points.forEach((ee) => {
+      ee.classList.remove("active");
+    });
+    e.target.classList.add("active");
+
+    if (e.target.classList.contains("first")) {
+      holder.scrollTo(0, 0);
+    } else if (e.target.classList.contains("second")) {
+      holder.scrollTo(375, 0);
+    } else if (e.target.classList.contains("third")) {
+      holder.scrollTo(750, 0);
+    }
+    // holder.scrollBy(areas.scrollWidth,0)
+  });
+});
+
