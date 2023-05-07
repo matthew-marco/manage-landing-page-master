@@ -222,7 +222,10 @@ section .container .right .text span {
   background: white;
   margin-right: 30px;
   border: 3px solid black;
+  cursor: pointer;
+  caret-color: transparent;
 }
+
 
 .section_three .container .points.active {
   background-color: black;
@@ -291,12 +294,20 @@ footer .container .third_row form .inputforerror.error p {
   display: block;
 
 }
+footer .container .third_row form .inputforerror.error input:focus{
+  outline: none;
+  caret-color: transparent
 
+}
 footer .container .third_row form .inputforerror.error input {
   border: 2px solid var(--Bright-Red);
   color: red;
   outline: none;
+  
+  
+
 }
+
 
 footer .container .third_row form .inputforerror p {
   color: var(--Bright-Red);

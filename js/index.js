@@ -7,6 +7,10 @@ links.forEach((link) => {
 });
 let email = document.querySelector(".email");
 let buttonSubmit = document.querySelector(".submit");
+let inputErrort = document.querySelector(
+  ".hidewhenmobile .container .third_row form .inputforerror"
+);
+
 buttonSubmit.addEventListener("click", (e) => {
   let send = false;
   if (
@@ -19,25 +23,30 @@ buttonSubmit.addEventListener("click", (e) => {
   }
   if (send === false) {
     e.preventDefault();
+    inputErrort.classList.add("error");
   } else {
   }
 });
 
 let emailmob = document.querySelector(".email.mob");
 let buttonSubmitmob = document.querySelector(".submit.mob");
-console.log(emailmob);
+let inputError = document.querySelector(
+  ".showwhenmobile .container .third_row form .inputforerror"
+);
+
 buttonSubmitmob.addEventListener("click", (e) => {
   let send = false;
   if (
-    !(email.value === "") &&
-    email.value.match(
+    !(emailmob.value === "") &&
+    emailmob.value.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     )
   ) {
     send = true;
-  }
-  if (send === false) {
+  } else if (send === false) {
     e.preventDefault();
+    console.log("false");
+    inputError.classList.add("error");
   }
 });
 
@@ -60,20 +69,23 @@ let areas = document.querySelector(".section_three .container .holder .areas");
 
 holder.addEventListener("scroll", () => {
   let holdernumb = holder.scrollLeft;
-  if (holder.scrollLeft < 350) {
+  if (holder.scrollLeft < holder.scrollWidth - 30) {
     points.forEach((p) => {
       p.classList.remove("active");
     });
     document.querySelector(".first").classList.add("active");
   }
-  if (holder.scrollLeft > 351) {
+  if (holder.scrollLeft > holder.scrollWidth / 4) {
     points.forEach((p) => {
       p.classList.remove("active");
       console.log(holder.scrollLeft);
     });
     document.querySelector(".second").classList.add("active");
   }
-  if (holder.scrollLeft > 650) {
+  if (
+    holder.scrollLeft >
+    holder.scrollWidth / 3 + holder.scrollWidth / 3 - 40
+  ) {
     points.forEach((p) => {
       p.classList.remove("active");
       console.log(holder.scrollLeft);
@@ -92,9 +104,9 @@ points.forEach((p) => {
     if (e.target.classList.contains("first")) {
       holder.scrollTo(0, 0);
     } else if (e.target.classList.contains("second")) {
-      holder.scrollTo(375, 0);
+      holder.scrollTo(holder.scrollWidth / 3, 0);
     } else if (e.target.classList.contains("third")) {
-      holder.scrollTo(750, 0);
+      holder.scrollTo(holder.scrollWidth / 3 + holder.scrollWidth / 3, 0);
     }
     // holder.scrollBy(areas.scrollWidth,0)
   });

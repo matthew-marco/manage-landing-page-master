@@ -2,10 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
+  caret-color: transparent;
 }
 
 :root {
@@ -379,6 +381,9 @@ footer .container .third_row form .inputforerror.error p {
   display: block;
 
 }
+footer .container .third_row form .inputforerror input{
+  caret-color: black;
+}
 
 footer .container .third_row form .inputforerror.error input {
   border: 2px solid var(--Bright-Red);
@@ -418,6 +423,7 @@ footer.showwhenmobile {
 
 footer .container .third_row form input {
   border: none;
+
 }
 
 /* end footer  */
