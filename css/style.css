@@ -209,7 +209,10 @@ section .container .right .setion .number {
   color: white;
   margin-right: 20px;
   min-width: 61px;
+  position: relative;
+  top: 50%;
   text-align: center;
+  transform: translateY(-29%);
 }
 
 /* sectionn2 end */
@@ -295,6 +298,7 @@ section .container .right .setion .number {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 100%;
 }
 
 .section_four .container h4 {
