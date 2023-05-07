@@ -305,7 +305,9 @@ footer .container .third_row form .inputforerror p {
   display: none;
 
 }
-
+footer .container .third_row form input{
+  border: none;
+}
 footer .container .third_row form .submit {
   padding: 10px 25px;
   border-radius: 22px;
@@ -350,6 +352,9 @@ footer .container .third_row {
 .logo p {
   color: var(--Dark-Grayish-Blue);
   margin-bottom: 30px;
+}
+footer .container .third_row form input{
+  border: none;
 }
 
 /* footer end  */

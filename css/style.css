@@ -52,9 +52,10 @@ body {
 
 
 /* start header */
-.showwhenmobile{
+.showwhenmobile {
   display: none;
 }
+
 header {
   margin-top: 30px;
   margin-bottom: 80px;
@@ -137,6 +138,7 @@ main .container .left button {
 main .container .left button:hover {
   filter: brightness(160%);
 }
+
 main .container .right img {
   max-width: 100%;
 }
@@ -180,6 +182,7 @@ section .container .right .setion .text h3 {
   margin-bottom: 30px;
   color: var(--Dark-Blue);
 }
+
 @media (min-width:768px) {
   section .container .right .setion .text h3 {
     font-size: 18px;
@@ -408,8 +411,13 @@ footer .container .third_row form input:last-of-type:hover {
 footer .container .third_row {
   color: var(--Dark-Grayish-Blue);
 }
-footer.showwhenmobile{
+
+footer.showwhenmobile {
   display: none;
+}
+
+footer .container .third_row form input {
+  border: none;
 }
 
 /* end footer  */
