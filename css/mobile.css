@@ -307,7 +307,9 @@ footer .container .third_row form .inputforerror.error input {
   
 
 }
-
+footer .container .third_row form .inputforerror {
+  margin-right: 15px;
+}
 
 footer .container .third_row form .inputforerror p {
   color: var(--Bright-Red);

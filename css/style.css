@@ -381,7 +381,8 @@ footer .container .third_row form .inputforerror.error p {
   display: block;
 
 }
-footer .container .third_row form .inputforerror input{
+
+footer .container .third_row form .inputforerror input {
   caret-color: black;
 }
 
@@ -424,6 +425,10 @@ footer.showwhenmobile {
 footer .container .third_row form input {
   border: none;
 
+}
+
+footer .container .third_row form .inputforerror {
+  margin-right: 15px;
 }
 
 /* end footer  */
