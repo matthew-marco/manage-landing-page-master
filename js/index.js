@@ -2,7 +2,7 @@ let links = document.querySelectorAll("a");
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(e.target);
+    // console.log(e.target);
   });
 });
 let email = document.querySelector(".email");
@@ -45,7 +45,7 @@ buttonSubmitmob.addEventListener("click", (e) => {
     send = true;
   } else if (send === false) {
     e.preventDefault();
-    console.log("false");
+    // console.log("false");
     inputError.classList.add("error");
   }
 });
@@ -53,12 +53,16 @@ buttonSubmitmob.addEventListener("click", (e) => {
 let navMenu = document.querySelector(".holdernav");
 let navIcon = document.querySelector("i");
 let Header = document.querySelector(".showwhenmobile");
+let linksNav = document.querySelectorAll(".showwhenmobile .container .holdernav a ");
 navIcon.addEventListener("click", () => {
   navMenu.classList.toggle("close");
+  linksNav.forEach(link => {
+    link.classList.toggle("close")
+    
+  });
   if (!navMenu.classList.contains("close")) {
     Header.style.marginBottom = "150px";
-  }
-  if (navMenu.classList.contains("close")) {
+  } else if (navMenu.classList.contains("close")) {
     Header.style.marginBottom = "80px";
   }
 });
@@ -67,18 +71,21 @@ let points = document.querySelectorAll(".points");
 let holder = document.querySelector(".section_three .container .holder");
 let areas = document.querySelector(".section_three .container .holder .areas");
 
-holder.addEventListener("scroll", () => {
+holder.addEventListener("scroll", (e) => {
+  // e.target.scrollTo(holder.scrollWidth / 3, 0);
   let holdernumb = holder.scrollLeft;
+
   if (holder.scrollLeft < holder.scrollWidth - 30) {
     points.forEach((p) => {
       p.classList.remove("active");
+      // console.log(holder.scrollWidth / 3);
     });
     document.querySelector(".first").classList.add("active");
   }
   if (holder.scrollLeft > holder.scrollWidth / 4) {
     points.forEach((p) => {
       p.classList.remove("active");
-      console.log(holder.scrollLeft);
+      // console.log(holder.scrollLeft);
     });
     document.querySelector(".second").classList.add("active");
   }
@@ -88,7 +95,7 @@ holder.addEventListener("scroll", () => {
   ) {
     points.forEach((p) => {
       p.classList.remove("active");
-      console.log(holder.scrollLeft);
+      // console.log(holder.scrollLeft);
     });
     document.querySelector(".third").classList.add("active");
   }

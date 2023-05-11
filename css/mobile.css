@@ -61,35 +61,59 @@ header.hidewhenmobile {
 }
 
 .showwhenmobile .container .holdernav.close {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: .3s;
 }
+
+
 
 /* header end  */
 .showwhenmobile .container .holdernav {
   position: absolute;
-  left: 80%;
-  transform: translateX(-50%);
-
-
+  /* left: 80%; */
+  /* transform: translateX(-50%); */
   text-align: center;
   top: 40px;
-
   width: 120px;
+  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: #efefef;
+  height: 141px;
+  transition: .3s;
+  border-radius: 10px;
 }
 
+.showwhenmobile .container .holdernav.close a.close {
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
 
 .showwhenmobile .container .holdernav a {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-decoration: none;
 
   color: var(--Dark-Blue);
   cursor: pointer;
-  transition: 0.2s;
+  transition: 1s;
   font-weight: bold;
 
+  height: calc(100px / 6);
+  transition: .5s;
+  
 
+}
 
+.showwhenmobile .container .holdernav a:last-child {
+  margin-bottom: 0;
+}
+
+.showwhenmobile .container .holdernav a:first-child {
+  margin-top: 5px;
 }
 
 /* main start */
@@ -294,19 +318,21 @@ footer .container .third_row form .inputforerror.error p {
   display: block;
 
 }
-footer .container .third_row form .inputforerror.error input:focus{
+
+footer .container .third_row form .inputforerror.error input:focus {
   outline: none;
   caret-color: transparent
-
 }
+
 footer .container .third_row form .inputforerror.error input {
   border: 2px solid var(--Bright-Red);
   color: red;
   outline: none;
-  
-  
+
+
 
 }
+
 footer .container .third_row form .inputforerror {
   margin-right: 15px;
 }
@@ -318,9 +344,11 @@ footer .container .third_row form .inputforerror p {
   display: none;
 
 }
-footer .container .third_row form input{
+
+footer .container .third_row form input {
   border: none;
 }
+
 footer .container .third_row form .submit {
   padding: 10px 25px;
   border-radius: 22px;
@@ -366,7 +394,8 @@ footer .container .third_row {
   color: var(--Dark-Grayish-Blue);
   margin-bottom: 30px;
 }
-footer .container .third_row form input{
+
+footer .container .third_row form input {
   border: none;
 }
 
