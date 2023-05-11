@@ -51,6 +51,7 @@ header.hidewhenmobile {
 .showwhenmobile {
   display: block;
   /* margin-bottom: 150px; */
+  transition: .5s;
 }
 
 .showwhenmobile .container {
@@ -104,7 +105,7 @@ header.hidewhenmobile {
 
   height: calc(100px / 6);
   transition: .5s;
-  
+
 
 }
 
