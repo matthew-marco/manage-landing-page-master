@@ -336,6 +336,8 @@ footer .container .third_row form .inputforerror.error input {
 
 footer .container .third_row form .inputforerror {
   margin-right: 15px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 footer .container .third_row form .inputforerror p {
